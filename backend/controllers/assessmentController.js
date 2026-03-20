@@ -129,6 +129,7 @@ export const submitCode = async (req, res) => {
 
     res.json({ message: 'Code submission saved', status: 'accepted' });
   } catch (error) {
+    console.error("submitCode error:", error);
     res.status(500).json({ error: error.message });
   }
 };
